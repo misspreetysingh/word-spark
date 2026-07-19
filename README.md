@@ -131,3 +131,5 @@ The application architecture follows strict separation of concerns, making it re
 * **AI Sentence Generation**: Add a button on the word card that sends the word to a lightweight server API (e.g. OpenAI/Gemini SDK) to generate dynamic, user-tailored context examples.
 * **Spaced Repetition (SRS)**: Add a `spaced_repetition` object store inside `db.js` tracking intervals using SuperMemo-2 (SM-2) scheduling algorithms.
 * **Flashcards/Quizzes**: Implement a dynamic multiple-choice quiz dashboard mapping synonyms and definitions from the database.
+
+* 
