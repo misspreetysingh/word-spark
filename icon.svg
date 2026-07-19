@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e0c33"/>
+      <stop offset="50%" stop-color="#3c1053"/>
+      <stop offset="100%" stop-color="#0f021f"/>
+    </linearGradient>
+
+    <!-- Spark Gold Gradient -->
+    <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5C3"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FF8C00"/>
+    </linearGradient>
+
+    <!-- Book Pages Gradient -->
+    <linearGradient id="pageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#D1C4E9"/>
+    </linearGradient>
+
+    <!-- Shadow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Circular Base -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle circular accent lines -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="6"/>
+  <circle cx="256" cy="256" r="210" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="2"/>
+
+  <!-- Open Book Base -->
+  <g transform="translate(0, 40)" filter="url(#glow)">
+    <!-- Back Cover Shadow / Outline -->
+    <path d="M120 380 C190 385 240 400 256 410 C272 400 322 385 392 380 L392 230 C322 235 272 250 256 260 C240 250 190 235 120 230 Z" fill="#000000" opacity="0.3"/>
+    
+    <!-- Left Cover -->
+    <path d="M124 374 C192 379 242 394 256 404 L256 254 C242 244 192 229 124 224 Z" fill="#5E35B1"/>
+    
+    <!-- Right Cover -->
+    <path d="M388 374 C320 379 270 394 256 404 L256 254 C270 244 320 229 388 224 Z" fill="#4527A0"/>
+
+    <!-- Left Page Backing -->
+    <path d="M130 368 C195 373 243 386 256 394 L256 246 C243 238 195 225 130 220 Z" fill="#E0E0E0"/>
+
+    <!-- Right Page Backing -->
+    <path d="M382 368 C317 373 269 386 256 394 L256 246 C269 238 317 225 382 220 Z" fill="#BDBDBD"/>
+
+    <!-- Left Page White -->
+    <path d="M136 362 C198 367 244 378 256 386 L256 240 C244 232 198 221 136 216 Z" fill="url(#pageGrad)"/>
+
+    <!-- Right Page White -->
+    <path d="M376 362 C314 367 268 378 256 386 L256 240 C268 232 314 221 376 216 Z" fill="url(#pageGrad)"/>
+    
+    <!-- Ribbon Bookmark -->
+    <path d="M251 245 L251 405 L261 405 L261 245 Z" fill="#D32F2F"/>
+    <path d="M251 405 L256 398 L261 405 Z" fill="#B71C1C"/>
+  </g>
+
+  <!-- Vibrant Spark/Light Burst rising from the book -->
+  <g transform="translate(256, 175)" filter="url(#glow)">
+    <!-- Outer Glow behind Spark -->
+    <circle cx="0" cy="0" r="80" fill="#FFD700" opacity="0.15" filter="url(#glow)"/>
+    
+    <!-- 8-Pointed Star / Spark -->
+    <!-- N-S long point, E-W long point, diagonals short -->
+    <path d="M0 -110 
+             C5 -40 15 -15 45 -15 
+             C15 -15 15 -5 80 0 
+             C15 5 15 15 45 15 
+             C15 15 5 40 0 110 
+             C-5 40 -15 15 -45 15 
+             C-15 15 -15 5 -80 0 
+             C-15 -5 -15 -15 -45 -15 
+             C-15 -15 -5 -40 0 -110 Z" 
+          fill="url(#sparkGrad)"/>
+          
+    <!-- Inner bright center core -->
+    <path d="M0 -50 
+             C2 -20 8 -8 20 -8 
+             C8 -8 8 -2 40 0 
+             C8 2 8 8 20 8 
+             C8 8 2 20 0 50 
+             C-2 20 -8 8 -20 8 
+             C-8 8 -8 2 -40 0 
+             C-8 -2 -8 -8 -20 -8 
+             C-8 -8 -2 -20 0 -50 Z" 
+          fill="#FFFFFF"/>
+
+    <!-- Small side sparkles -->
+    <circle cx="-100" cy="-60" r="6" fill="#FFD700"/>
+    <circle cx="110" cy="-40" r="10" fill="#FFF5C3"/>
+    <circle cx="-90" cy="80" r="8" fill="#FFF5C3"/>
+    <circle cx="95" cy="70" r="5" fill="#FFD700"/>
+    <line x1="110" y1="-55" x2="110" y2="-25" stroke="#FFF5C3" stroke-width="2"/>
+    <line x1="95" y1="-40" x2="125" y2="-40" stroke="#FFF5C3" stroke-width="2"/>
+  </g>
+</svg>
